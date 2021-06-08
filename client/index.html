@@ -1,0 +1,35 @@
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+<script type="text/javascript">
+  function submit(){
+    if(document.getElementById("listen_text").value == window.spanish_text){
+        confetti();
+    }
+}
+  function gettext(){
+    $.ajax({
+         url: "https://texttospeech-731150360.development.catalystserverless.com/server/textto_speech_function/listen",
+         type: "get",
+         contentType: "application/json",
+         success: function (data) {
+            window.spanish_text = data.Phrases.Spanish
+           window.speechSynthesis.speak(
+              new SpeechSynthesisUtterance(data.Phrases.Phrase)
+           );
+         },
+         error: function (error) {
+             alert(error.message);
+         }
+     });
+  }
+</script>
+<html>
+<body>
+  <h3> Listening Corner</h3>
+  Listen to the the text and enter what you hear:<br><br>
+  <textarea id ="listen_text"></textarea><br><br>
+<button onclick="gettext()">Start</button>
+<button onclick="submit()">Submit</button>
+</body>
+</html>
