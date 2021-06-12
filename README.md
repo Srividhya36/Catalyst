@@ -1,3 +1,5 @@
 # Catalyst
 
-Create a simple text to speech app. On opening the browser a Spanish word will get fetched from the Catalyst Datastore along with its english translation. The word will be narrated in English. You have to translate it to Spanish and type it in the textbox. If your answer is correct, confetti and alert message is displayed. If not, an error message will be displayed.
+Build a simple serverless text to speech app that helps you learn Spanish using Zoho Catalyst in 5 steps
+
+Step by step instructions available here<https://skssrividhya.medium.com/spanish-learning-app-using-zoho-catalyst-in-5-steps-6d9e0ee91270>
