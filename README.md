@@ -1,4 +1,4 @@
-# Catalyst
+# Spanish Learning App : Using Zoho Catalyst in 5 steps
 
 Build a simple serverless text to speech app that helps you learn Spanish using Zoho Catalyst in 5 steps
 
